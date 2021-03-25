@@ -1,3 +1,7 @@
 {
-    "python.pythonPath": "C:\\Users\\alxbo\\AppData\\Local\\Programs\\Python\\Python39\\python.exe"
+    "python.pythonPath": "c:\\Users\\alxbo\\Documents\\Data_Science\\OTUS\\Lecture_8_Docker_Assignment_2\\Assignment_2\\venv\\Scripts\\python.exe",
+    "python.linting.banditEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true,
+    "git.ignoreLimitWarning": true
 }
