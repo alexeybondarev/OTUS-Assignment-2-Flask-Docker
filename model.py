@@ -1,13 +1,10 @@
 import pandas as pd
 import numpy as np
-from sklearn.linear_model import LogisticRegression, LogisticRegressionCV
+from sklearn.linear_model import LogisticRegressionCV
 from sklearn.model_selection import train_test_split
-from sklearn.pipeline import make_pipeline
 from sklearn.pipeline import Pipeline
-from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import StandardScaler
-from sklearn.model_selection import RandomizedSearchCV
-from scipy.stats import uniform
+import pickle
 
 data = pd.read_csv('./heart.csv')
 
@@ -32,6 +29,10 @@ model_lr.fit(data_train, target_train)
 model_lr.predict(data_val)
 print('model AUC: ', model_lr.score(data_val, target_val))
 
-test_1 = list(data_val.iloc[[0]].values)
+pickle.dump(model_lr, open('model_assignment_2.pkl', 'wb'))
+
+test_1 = list(data_val.iloc[[10]].values)
 predict_prob = model_lr.predict_proba(test_1)
+predicted_class = np.argmax(model_lr.predict_proba(test_1))
 print('Predicted probability', predict_prob)
+print('Predicted class', predicted_class)
