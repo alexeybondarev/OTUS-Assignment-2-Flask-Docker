@@ -48,9 +48,5 @@ class HeartClassification(Resource):
         payload.update({'prediction_class': predicted_class})
         return payload
 
-data = pd.read_csv('./heart.csv')
-feature_cols = list(data.columns)
-feature_cols.remove('target')
-
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1,3 +1,6 @@
 /.vscode
 /venv
 /__pycache__/
+Docker-compose.yml
+dockerfile
+hello.py
