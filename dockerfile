@@ -4,4 +4,4 @@ COPY . /root
 
 WORKDIR /root
 
-RUN pip install flask gunicorn
+RUN pip install flask gunicorn flask_restx werkzeug numpy sklearn scipy
