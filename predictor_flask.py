@@ -1,9 +1,7 @@
 import pickle
-from sklearn.linear_model import LogisticRegression
 from flask import Flask
 from flask_restx import Api, Resource, fields
 from werkzeug.middleware.proxy_fix import ProxyFix
-import pandas as pd
 import numpy as np
 
 model = pickle.load(open('model_assignment_2.pkl', 'rb'))
